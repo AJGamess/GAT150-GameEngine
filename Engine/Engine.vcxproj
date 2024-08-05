@@ -20,6 +20,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Audio\Audio.cpp" />
+    <ClCompile Include="Source\Core\EAssert.cpp" />
+    <ClCompile Include="Source\Core\EFile.cpp" />
     <ClCompile Include="Source\Core\ETime.cpp" />
     <ClCompile Include="Source\Engine.cpp" />
     <ClCompile Include="Source\Framework\Actor.cpp" />
@@ -33,8 +35,8 @@
     <ClCompile Include="Source\Renderer\Text.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EAssert.h" />
     <ClInclude Include="Source\Audio\Audio.h" />
+    <ClInclude Include="Source\Core\EAssert.h" />
     <ClInclude Include="Source\Core\EFile.h" />
     <ClInclude Include="Source\Core\ETime.h" />
     <ClInclude Include="Source\Engine.h" />
