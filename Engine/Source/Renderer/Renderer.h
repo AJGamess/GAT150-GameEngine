@@ -2,6 +2,7 @@
 #include <SDL.h>
 #include <string>
 #include <SDL_ttf.h>
+#include <SDL_image.h>
 class Renderer
 {
 public:
@@ -27,6 +28,9 @@ public:
 	int GetHeight() const { return m_height; }
 
 	friend class Text;
+
+	friend class Texture;
+	void DrawTexture(class Texture* texture, float x, float y, float angle = 0.0f/*...use default value 0.0f...*/);
 private:
 	SDL_Window* m_window{ nullptr };
 	SDL_Renderer* m_renderer{nullptr};

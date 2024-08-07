@@ -16,7 +16,10 @@
 #include "..\Source\Renderer\Font.h"
 
 #include "..\Source\Renderer\Model.h"
+#include "..\Source\Renderer\Texture.h"
 #include "..\Source\Math\Transform.h"
+
+#include "..\Source\Components\Components.h"
 
 #include <fmod.hpp>
 #include <SDL.h>
