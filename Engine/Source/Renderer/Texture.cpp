@@ -31,6 +31,16 @@ bool Texture::Load(const std::string& filename, Renderer& renderer)
     return true;
 }
 
+bool Texture::Create(std::string name, ...)
+{
+    va_list args;
+    va_start(args, name);
+    Renderer renderer = va_arg(args, Renderer);
+    va_end(args);
+
+    return Load(name, renderer);
+}
+
 Vector2 Texture::GetSize()
 {
     ASSERT(m_texture != nullptr);
@@ -40,5 +50,5 @@ Vector2 Texture::GetSize()
     SDL_Point size;
     SDL_QueryTexture(m_texture, NULL, NULL, &size.x, &size.y);
 
-    return Vector2{size.x, size.y}/*...Vector2 with size.x and size.y...*/;
+    return Vector2{size.x, size.y};
 }

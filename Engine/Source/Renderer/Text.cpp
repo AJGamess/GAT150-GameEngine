@@ -1,6 +1,5 @@
 #include "Text.h"
-#include <SDL_ttf.h>
-#include <iostream>
+
 Text::~Text()
 {
 	if (m_texture != nullptr)

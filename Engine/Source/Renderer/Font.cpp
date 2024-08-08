@@ -1,5 +1,4 @@
 #include "Font.h"
-#include <iostream>
 Font::~Font()
 {
 	if (m_ttfFont != nullptr)
@@ -18,4 +17,14 @@ bool Font::Load(const std::string& name, int fontSize)
 	}
 
 	return true;
+}
+
+bool Font::Create(std::string name, ...)
+{
+	va_list args;
+	va_start(args, name);
+	int fontSize = va_arg(args, int);
+	va_end(args);
+
+	return Load(name, fontSize);
 }

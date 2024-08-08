@@ -1,15 +1,19 @@
 #pragma once
+#include "../Resources/Resource.h"
 #include <string>
 #include <SDL_ttf.h>
-class Font
+#include <iostream>
+
+class Font : public Resource
 {
 public:
 	Font() = default;
 	~Font();
 
-	bool Load(const std::string& name, int fontSize);
-	_TTF_Font* GetTTFFont() { return m_ttfFont; }
+	bool Create(std::string name, ...) override;
+	bool Load(const std::string& filename, int fontSize);
 
+	// allow class access to private members
 	friend class Text;
 
 private:

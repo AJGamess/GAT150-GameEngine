@@ -21,6 +21,10 @@
 
 #include "..\Source\Components\Components.h"
 
+// ** resources **
+#include "Resources/Resource.h"
+#include "Resources/ResourceManager.h"
+
 #include <fmod.hpp>
 #include <SDL.h>
 #include <memory>
