@@ -7,10 +7,11 @@
 class TextureComponent : public RenderComponent
 {
 public:
+	CLASS_DECLARATION(TextureComponent);
 	void Intialize() override;
 	void Update(float dt) override;
 	void Draw(Renderer& renderer) override;
 public:
 	std::string textureName;
-	//res_t<Texture> texture;
+	res_t<Texture> texture;
 };

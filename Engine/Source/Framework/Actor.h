@@ -13,6 +13,8 @@ public:
 	Actor() = default;
 	Actor(const Transform& transform) : m_transform{ transform } {}
 
+	CLASS_DECLARATION(Actor);
+
 	void AddComponent(std::unique_ptr<Component> component);
 	virtual void Update(float dt);
 	virtual void Draw(Renderer& renderer);
@@ -21,6 +23,7 @@ public:
 	void SetLifespan(float damping) { m_lifespan = m_lifespan; }
 
 	const Transform& GetTransform() { return m_transform; }
+	void SetTransform(const Transform& transform) { m_transform = transform; }
 
 	void SetTag(const std::string& tag) { m_tag = tag; }
 	const std::string& GetTag() { return m_tag; }

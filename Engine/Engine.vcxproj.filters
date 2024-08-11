@@ -83,6 +83,9 @@
     <ClCompile Include="Source\Components\TextureComponent.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Core\Json.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Audio\Audio.h">
@@ -111,9 +114,6 @@
     </ClInclude>
     <ClInclude Include="Source\Input\Input.h">
       <Filter>Source Files\Input</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Renderer\Color.h">
-      <Filter>Source Files\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="Source\Renderer\Font.h">
       <Filter>Source Files\Renderer</Filter>
@@ -165,6 +165,15 @@
     </ClInclude>
     <ClInclude Include="Source\Core\Singleton.h">
       <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Core\Json.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Core\Factory.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Math\Color.h">
+      <Filter>Source Files\Math</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

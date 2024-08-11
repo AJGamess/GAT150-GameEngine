@@ -5,21 +5,28 @@
 #include "..\Source\Audio\Audio.h"
 
 #include "..\Source\Core\ETime.h"
+#include "Core/EFile.h"
+#include "Core/EAssert.h"
+#include "Core/Json.h"
+#include "Core/Factory.h"
+#include "Core/Singleton.h"
 
 #include "..\Source\Math\Vector2.h"
 #include "..\Source\Math\Random.h"
 #include "..\Source\Math\MathUtils.h"
+#include "..\Source\Math\Color.h"
 
 #include "..\Source\Renderer\Particle.h"
 #include "..\Source\Renderer\ParticleSystem.h"
 #include "..\Source\Renderer\Text.h"
 #include "..\Source\Renderer\Font.h"
+#include "..\Source\Math\Transform.h"
 
 #include "..\Source\Renderer\Model.h"
 #include "..\Source\Renderer\Texture.h"
-#include "..\Source\Math\Transform.h"
 
 #include "..\Source\Components\Components.h"
+#include "Framework/Actor.h"
 
 // ** resources **
 #include "Resources/Resource.h"

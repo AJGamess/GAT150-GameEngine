@@ -1,7 +1,7 @@
 #pragma once
 #include "Renderer.h"
 #include "Font.h"
-#include "Color.h"
+#include "..\Math\Color.h"
 #include <string>
 #include <SDL_ttf.h>
 #include <iostream>

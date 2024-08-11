@@ -1,7 +1,7 @@
 #pragma once
 #include "..\Math\Vector2.h"
 #include "Renderer.h"
-#include "Color.h"
+#include "..\Math\Color.h"
 #include "..\Math\Transform.h"
 
 
