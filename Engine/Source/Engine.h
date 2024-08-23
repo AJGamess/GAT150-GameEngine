@@ -1,36 +1,52 @@
 #pragma once
 
-#include "..\Source\Renderer\Renderer.h"
-#include "..\Source\Input\Input.h"
+//Audio
 #include "..\Source\Audio\Audio.h"
 
-#include "..\Source\Core\ETime.h"
+//Components
+#include "..\Source\Components\Component.h"
+#include "..\Source\Components\TextureComponent.h"
+#include "..\Source\Components\TextComponent.h"
+#include "..\Source\Components\EnginePhysicsComponent.h"
+
+//Core
 #include "Core/EFile.h"
 #include "Core/EAssert.h"
 #include "Core/Json.h"
 #include "Core/Factory.h"
 #include "Core/Singleton.h"
+#include "..\Source\Core\ETime.h"
 
+//Framework
+#include "Framework/Actor.h"
+#include "Framework/Scene.h"
+//#include "Framework/Game.h"
+
+//Input
+#include "..\Source\Input\Input.h"
+
+//Math
 #include "..\Source\Math\Vector2.h"
 #include "..\Source\Math\Random.h"
 #include "..\Source\Math\MathUtils.h"
 #include "..\Source\Math\Color.h"
+#include "..\Source\Math\Transform.h"
 
+//Renderer
+#include "..\Source\Renderer\Renderer.h"
 #include "..\Source\Renderer\Particle.h"
 #include "..\Source\Renderer\ParticleSystem.h"
 #include "..\Source\Renderer\Text.h"
 #include "..\Source\Renderer\Font.h"
-#include "..\Source\Math\Transform.h"
-
 #include "..\Source\Renderer\Model.h"
 #include "..\Source\Renderer\Texture.h"
-
-#include "..\Source\Components\Components.h"
-#include "Framework/Actor.h"
 
 // ** resources **
 #include "Resources/Resource.h"
 #include "Resources/ResourceManager.h"
+
+//Physics
+#include "Physics/Physics.h"
 
 #include <fmod.hpp>
 #include <SDL.h>
@@ -53,6 +69,7 @@ public:
 	Input& GetInput()		{ return *m_input; }
 	Audio& GetAudio()		{ return *m_audio; }
 	ParticleSystem& GetPS() { return *m_particleSystem; }
+	Physics& GetPhysics() { return *m_physics; }
 
 	Time& GetTime()			{ return *m_time;  }
 
@@ -67,6 +84,8 @@ private:
 	std::unique_ptr<Input>		m_input;
 	std::unique_ptr<Audio>		m_audio;
 
+	std::unique_ptr<Physics> m_physics;
+	
 	std::unique_ptr<ParticleSystem> m_particleSystem;
 };
 

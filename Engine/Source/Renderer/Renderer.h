@@ -3,6 +3,7 @@
 #include <string>
 #include <SDL_ttf.h>
 #include <SDL_image.h>
+#include <memory>
 class Renderer
 {
 public:
@@ -28,9 +29,10 @@ public:
 	int GetHeight() const { return m_height; }
 
 	friend class Text;
-
 	friend class Texture;
-	void DrawTexture(class Texture* texture, float x, float y, float angle = 0.0f/*...use default value 0.0f...*/);
+
+	void DrawTexture(std::weak_ptr<class Texture> texture, float x, float y, float angle = 0.0f/*...use default value 0.0f...*/);
+	void DrawTexture(std::weak_ptr<class Texture> texture, const struct Transform& transform, bool hflip = false);
 private:
 	SDL_Window* m_window{ nullptr };
 	SDL_Renderer* m_renderer{nullptr};
