@@ -1,0 +1,45 @@
+{
+	"actors": [
+		{
+			"name": "background",
+			"transform": {
+				"position": [ 400, 300 ],
+				"rotation": 0,
+				"scale": 1.6
+			},
+			"components": [
+				{
+					"type": "TextureComponent",
+					"textureName": "textures/green_nebula.png"
+				}
+			]
+		},
+		{
+			"name": "player",
+			"transform": {
+				"position": [ 60, 60 ],
+				"rotation": 0,
+				"scale": 1
+			},
+			"components": [
+				{
+					"type": "TextureComponent",
+					"textureName": "textures/warrior.png"
+				},
+				{
+					"type": "Box2DPhysicsComponent",
+					"damping": 0.2,
+					"angularDamping": 0.85,
+					"gravityscale": 1,
+					"friction": 0.2,
+					"constrainingAngle": true,
+					"size": [16,32]
+				},
+				{
+					"type": "CharacterComponent",
+					"speed": 100
+				}
+			]
+		}
+	]
+}

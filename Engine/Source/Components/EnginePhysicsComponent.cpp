@@ -16,6 +16,11 @@ void EnginePhysicsComponent::Update(float dt)
 
 	acceleration = Vector2{ 0, 0 };
 }
+/*
+void EnginePhysicsComponent::ApplyTorque(float torque) {
+	owner->transform.rotation += torque;
+}
+*/
 
 void EnginePhysicsComponent::ApplyForce(const Vector2& force)
 {

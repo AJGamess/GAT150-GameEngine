@@ -15,6 +15,10 @@ void RocketComponent::Update(float dt)
 
 void RocketComponent::OnCollisionEnter(Actor* actor)
 {
+	if (!actor->destroyed && (actor->name == "enemy")) {
+		EVENT_NOTIFY_DATA(AddPoints, 200);
+		actor->destroyed = true;
+	}
 	std::cout << "rocket hit\n";
 }
 

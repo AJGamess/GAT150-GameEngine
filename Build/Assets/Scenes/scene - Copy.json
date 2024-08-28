@@ -61,7 +61,7 @@
 		},
 		{
 			"name": "text",
-			"active": false,
+			"active": true,
 			"transform": {
 				"position": [ 60, 360 ],
 				"rotation": 0,

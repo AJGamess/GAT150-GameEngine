@@ -5,6 +5,11 @@
 class RigidBody
 {
 public:
+	enum Shape {
+		BOX,
+		CAPSULE,
+		CIRCLE
+	};
 	struct def_t
 	{
 		// body

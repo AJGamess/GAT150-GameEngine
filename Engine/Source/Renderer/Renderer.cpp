@@ -1,6 +1,7 @@
 #include "Renderer.h"
 #include "Texture.h"
 #include "../Math/Transform.h"
+#include "Math/Rect.h"
 #include <iostream>
 
 bool Renderer::Initialize()
@@ -51,7 +52,7 @@ bool Renderer::CreateWindow(std::string title, int width, int height)
 		return 1;
 	}
 	// create renderer
-	m_renderer = SDL_CreateRenderer(m_window, -1, 0);
+	m_renderer = SDL_CreateRenderer(m_window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
 	return true;
 }
@@ -125,4 +126,19 @@ void Renderer::DrawTexture(std::weak_ptr<class Texture> texture, const Transform
 
 	// https://wiki.libsdl.org/SDL2/SDL_RenderCopyExF
 	SDL_RenderCopyExF(m_renderer, texture.lock()->m_texture, NULL, &destRect, transform.rotation, NULL, (hflip) ? SDL_FLIP_HORIZONTAL : SDL_FLIP_NONE);
+}
+
+void Renderer::DrawTexture(std::weak_ptr<class Texture> texture, const Transform& transform, const Rect& source, bool hflip)
+{
+	Vector2 size = Vector2{ source.w, source.h } * transform.scale;
+
+	SDL_FRect destRect;
+	destRect.x = transform.position.x - size.x * 0.5f;
+	destRect.y = transform.position.y - size.y * 0.5f;
+	destRect.w = size.x;
+	destRect.h = size.y;
+
+	// https://wiki.libsdl.org/SDL2/SDL_RenderCopyExF
+	SDL_RenderCopyExF(m_renderer, texture.lock()->m_texture,(SDL_Rect*)(&source), &destRect, transform.rotation, NULL, (hflip) ? SDL_FLIP_HORIZONTAL : SDL_FLIP_NONE);
+
 }

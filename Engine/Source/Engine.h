@@ -31,6 +31,7 @@
 #include "..\Source\Math\MathUtils.h"
 #include "..\Source\Math\Color.h"
 #include "..\Source\Math\Transform.h"
+#include "Math/Rect.h"
 
 //Renderer
 #include "..\Source\Renderer\Renderer.h"
@@ -47,6 +48,10 @@
 
 //Physics
 #include "Physics/Physics.h"
+
+//Events
+#include "Events/EventSystem.h"
+#include "Events/Event.h"
 
 #include <fmod.hpp>
 #include <SDL.h>

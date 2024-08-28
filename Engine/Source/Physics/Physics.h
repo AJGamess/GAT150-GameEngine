@@ -5,8 +5,8 @@
 
 #define PIXELS_PER_UNIT	48.0f
 
-inline b2Vec2  ConvertVec2(const Vector2& v) { return { v.x, v.y }; }
-inline Vector2 ConvertVec2(const b2Vec2& v)  { return { v.x, v.y }; }
+inline b2Vec2  ConvertVec2(const Vector2& v) { return b2Vec2{ v.x, v.y }; }
+inline Vector2 ConvertVec2(const b2Vec2& v)  { return Vector2{ v.x, v.y }; }
 
 class Physics
 {

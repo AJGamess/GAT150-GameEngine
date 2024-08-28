@@ -18,7 +18,7 @@ void PlayerComponent::Update(float dt)
 	if (owner->scene->engine->GetInput().GetKeyDown(SDL_SCANCODE_S)) thrust = -1;
 
 	owner->GetComponent<PhysicsComponent>()->ApplyTorque(rotate * 90 * dt);
-	Vector2 direction{ 1, 0 }.Rotate(Math::DegToRad(owner->transform.rotation));
+	Vector2 direction = Vector2{ 1, 0 }.Rotate(Math::DegToRad(owner->transform.rotation));
 	owner->GetComponent<PhysicsComponent>()->ApplyForce(direction * speed * thrust);
 
 	if (owner->scene->engine->GetInput().GetKeyDown(SDL_SCANCODE_SPACE))
@@ -32,8 +32,8 @@ void PlayerComponent::Update(float dt)
 
 void PlayerComponent::OnCollisionEnter(Actor* actor)
 {
-	//EVENT_NOTIFY(PlayerDead);
-	//EVENT_NOTIFY_DATA(AddPoints, 100);
+	EVENT_NOTIFY(PlayerDead);
+	EVENT_NOTIFY_DATA(AddPoints, 100);
 }
 
 void PlayerComponent::Read(const json_t& value)

@@ -63,6 +63,7 @@ int main(int argc, char* argv[])
 		engine->GetRenderer().EndFrame();
 	}
 
+	scene->RemoveAll();
 	ResourceManager::Instance().Clear();
 	engine->Shutdown();
 

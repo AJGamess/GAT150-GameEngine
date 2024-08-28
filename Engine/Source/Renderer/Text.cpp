@@ -1,5 +1,6 @@
 #include "Text.h"
 #include "../Core/EAssert.h"
+#include "../Renderer/Texture.h"
 
 bool Text::Create(Renderer& renderer, const std::string& text, const Color& color)
 {
@@ -24,6 +25,8 @@ bool Text::Create(Renderer& renderer, const std::string& text, const Color& colo
 
 	// free the surface, no longer needed after creating the texture
 	SDL_FreeSurface(surface);
+
+	m_texture = std::make_shared<Texture>(texture);
 
 	return true;
 }

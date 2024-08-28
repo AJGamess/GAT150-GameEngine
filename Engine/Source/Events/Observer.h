@@ -1,7 +1,8 @@
 #pragma once
+#include "EventSystem.h"
 
 class Observer
 {
 public:
-	virtual ~Observer() = default;
+	virtual ~Observer();
 };

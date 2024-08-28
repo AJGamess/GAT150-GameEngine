@@ -27,6 +27,15 @@ RigidBody::RigidBody(const Transform& transform, const Vector2& size, const def_
 	shapeDef.density = def.density;
 	shapeDef.isSensor = def.isSensor;
 
+	/*
+	switch (def.shape) {
+	case Shape::BOX:
+	{
+		b2Polygon box = b2MakeBox(hsize.x, hsize.y);
+		b2CreatePolygonShape(m_bodyId)
+	}
+	}
+	*/
 	b2CreatePolygonShape(m_bodyId, &shapeDef, &box);
 }
 
