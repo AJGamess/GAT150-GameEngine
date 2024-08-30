@@ -1,5 +1,6 @@
 #include "Engine.h"
 #include "Components/PlayerComponent.h"
+#include "Components/EnemyComponent.h"
 
 #include <iostream>
 #include <cstdlib>
@@ -18,8 +19,10 @@ int main(int argc, char* argv[])
 
 	Factory::Instance().Register<Actor>(Actor::GetTypeName());
 	Factory::Instance().Register<TextureComponent>(TextureComponent::GetTypeName());
+	Factory::Instance().Register<TextureAnimationComponent>(TextureAnimationComponent::GetTypeName());
 	Factory::Instance().Register<EnginePhysicsComponent>(EnginePhysicsComponent::GetTypeName());
 	Factory::Instance().Register<PlayerComponent>(PlayerComponent::GetTypeName());
+	Factory::Instance().Register<EnemyComponent>(EnemyComponent::GetTypeName());
 
 	std::unique_ptr<Engine> engine = std::make_unique<Engine>();
 	engine->Initialize();

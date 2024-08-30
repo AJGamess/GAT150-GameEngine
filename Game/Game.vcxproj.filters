@@ -30,6 +30,9 @@
     <ClCompile Include="Source\Components\CharacterComponent.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Components\EnemyComponent.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Components\PlayerComponent.h">
@@ -42,6 +45,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Source\Components\CharacterComponent.h">
+      <Filter>Source Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Components\EnemyComponent.h">
       <Filter>Source Files\Components</Filter>
     </ClInclude>
   </ItemGroup>

@@ -11,6 +11,7 @@ public:
 	void Update(float dt) override;
 
 	void OnCollisionEnter(Actor* actor);
+	void UpdateWinText(const std::string& newText);
 
 public:
 	float speed{ 0 };

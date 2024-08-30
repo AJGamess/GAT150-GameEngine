@@ -65,10 +65,24 @@ void Scene::AddActor(std::unique_ptr<Actor> actor, bool initialize)
 	actors.push_back(std::move(actor));
 }
 
-void Scene::RemoveAll()
+void Scene::RemoveAll(bool force)
 {
-	actors.clear();
+	std::erase_if(actors, [force](auto& actor) { return (force || !actor->persistent); });
+	//actors.clear();
 }
+
+Actor* Scene::GetActorByName(const std::string& name) const
+{
+	for (auto& actor : actors) 
+	{
+		if (actor->name == name) 
+		{
+			return actor.get();
+		}
+	}
+	return nullptr;
+}
+
 
 void Scene::Read(const json_t& value)
 {

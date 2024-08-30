@@ -28,6 +28,7 @@ void TextureAnimationComponent::Initialize()
 
 void TextureAnimationComponent::Update(float dt)
 {
+	std::cout << "TextureAnimationComponent::Update called" << std::endl;
 	TextureComponent::Update(dt);
 
 	// update timer
@@ -37,10 +38,14 @@ void TextureAnimationComponent::Update(float dt)
 		frameTimer = 1.0f / m_animation->fps;
 		frame++;
 		if (frame > m_animation->endFrame) frame = m_animation->startFrame;
+
+		std::cout << "Current Frame: " << frame << std::endl;
 	}
 
 	UpdateSource();
 }
+
+
 
 void TextureAnimationComponent::SetAnimation(const std::string& name, bool update)
 {

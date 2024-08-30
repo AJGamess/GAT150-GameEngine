@@ -25,6 +25,8 @@ public:
 		float density = 1.0f;
 		bool isSensor = false;
 
+		Shape shape = Shape::BOX;
+
 		class Actor* actor{ nullptr };
 	};
 

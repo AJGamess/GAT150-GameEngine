@@ -134,6 +134,15 @@
     <ClCompile Include="Source\Components\TextureAnimationComponent.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Audio\AudioClip.cpp">
+      <Filter>Source Files\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Audio\AudioSource.cpp">
+      <Filter>Source Files\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\AudioComponent.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Audio\Audio.h">
@@ -269,6 +278,15 @@
       <Filter>Source Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="Source\Components\TextureAnimationComponent.h">
+      <Filter>Source Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Audio\AudioClip.h">
+      <Filter>Source Files\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Audio\AudioSource.h">
+      <Filter>Source Files\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Components\AudioComponent.h">
       <Filter>Source Files\Components</Filter>
     </ClInclude>
   </ItemGroup>

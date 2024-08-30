@@ -1,13 +1,12 @@
 #pragma once
 
-//Audio
-#include "..\Source\Audio\Audio.h"
-
-//Components
-#include "..\Source\Components\Component.h"
-#include "..\Source\Components\TextureComponent.h"
-#include "..\Source\Components\TextComponent.h"
-#include "..\Source\Components\EnginePhysicsComponent.h"
+//Math
+#include "..\Source\Math\Vector2.h"
+#include "..\Source\Math\Random.h"
+#include "..\Source\Math\MathUtils.h"
+#include "..\Source\Math\Color.h"
+#include "..\Source\Math\Transform.h"
+#include "Math/Rect.h"
 
 //Core
 #include "Core/EFile.h"
@@ -20,18 +19,9 @@
 //Framework
 #include "Framework/Actor.h"
 #include "Framework/Scene.h"
-//#include "Framework/Game.h"
 
 //Input
 #include "..\Source\Input\Input.h"
-
-//Math
-#include "..\Source\Math\Vector2.h"
-#include "..\Source\Math\Random.h"
-#include "..\Source\Math\MathUtils.h"
-#include "..\Source\Math\Color.h"
-#include "..\Source\Math\Transform.h"
-#include "Math/Rect.h"
 
 //Renderer
 #include "..\Source\Renderer\Renderer.h"
@@ -42,12 +32,22 @@
 #include "..\Source\Renderer\Model.h"
 #include "..\Source\Renderer\Texture.h"
 
+//Audio
+#include "..\Source\Audio\Audio.h"
+
+//Physics
+#include "Physics/Physics.h"
+
 // ** resources **
 #include "Resources/Resource.h"
 #include "Resources/ResourceManager.h"
 
-//Physics
-#include "Physics/Physics.h"
+//Components
+#include "..\Source\Components\Component.h"
+#include "..\Source\Components\TextureComponent.h"
+#include "..\Source\Components\TextureAnimationComponent.h"
+#include "..\Source\Components\TextComponent.h"
+#include "..\Source\Components\EnginePhysicsComponent.h"
 
 //Events
 #include "Events/EventSystem.h"
